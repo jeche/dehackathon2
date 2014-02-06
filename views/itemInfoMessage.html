@@ -2,16 +2,40 @@
 <html>
 <head>
 <script src="../javascripts/index.js"></script>
+
 <link rel="stylesheet" type="text/css" href="../styles/itemInfoMessage.css">
+
 </head>
 
 <body>
-<p>Which item would you like to purchase?</p>
-<div class="frame">
-	<span class="itemHeading">Bike 1</span><span class="price">XXX</span>
-</div>
-<div class="frame">
-	<span class="itemHeading">Bike 2</span><span"price">XXX</span>
-</div>
+<h2 class="header">Which item would you like to purchase?</h2>
+<table class="itemListing">
+	<thead class="frame-heading">
+		<tr>
+			<th style='text-align:left'><span class="itemHeader">Bike 1</span></th>
+			<th style='text-align:right'><span class="price">$XXX</span></th>
+		</tr>		
+	</thead>
+	<tbody>
+		<tr>
+			<td><img src="../images/bike.jpg" class="itemImage"></span></td>
+			<td>Details go here</td>
+		</tr>
+	</tbody>
+</table>
+<table class="itemListing">
+	<thead class="frame-heading">
+		<tr>
+			<th style='text-align:left'><span class="itemHeader">Bike 2</span></th>
+			<th style='text-align:right'><span class="price">$XXX</span></th>
+		</tr>		
+	</thead>
+	<tbody>
+		<tr>
+			<td><img src="../images/bike.jpg" class="itemImage"></span></td>
+			<td>Details go here</td>
+		</tr>
+	</tbody>
+</table>
 </body>
 </html>
