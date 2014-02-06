@@ -2,14 +2,19 @@
 <html>
 <head>
 <script src="../javascripts/index.js"></script>
+<script src="../javascripts/jquery.js"></script>
 <script src="../javascripts/bootstrap.js"></script>
+<script src="../javascripts/secret.js"></script>
+<script src="../javascripts/knockout.js"></script>
+<script src="../controllers/apicontroller.js"></script>
+
 <link rel="stylesheet" type="text/css" href="../styles/bootstrap-responsive.css">
 <link rel="stylesheet" type="text/css" href="../styles/bootstrap.css">
 <link rel="stylesheet" type="text/css" href="../styles/itemInfoMessage.css">
 
 </head>
 
-<body>
+<body onload="get_cycle_list(0, 10000000)">
 <h2 class="header">Which item would you like to purchase?</h2>
 <table class="itemListing">
 	<thead class="frame-heading">
