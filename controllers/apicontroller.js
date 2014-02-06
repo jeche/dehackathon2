@@ -68,8 +68,10 @@ function get_cycle_list(minu, maxi){
 			);			
 		},
 		dataType:"JSON"
-	}); 
 
+	});
+	console.log(result); 
 	return result;
+	
 
 } 
