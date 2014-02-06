@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .frame{
 	border: black solid 1px;
 	padding: 15px;
@@ -9,4 +10,40 @@
 
 .price {
 	text-align: right;
+=======
+table thead tr{
+	border: black solid 1px;
+}
+.itemListing{
+	border: black solid 1px;
+	width: 500px;
+	padding: 15px;
+	margin: 10px;
+}
+.frame-header{
+	border: black solid 1px;
+	margin: 10px;
+}
+.itemHeader{
+	font-weight: bold;
+	padding-left: 10px;
+}
+
+.price {
+	padding-left: 50px;
+	padding-right: 10px;
+	margin: 10px;
+}
+.itemImage{
+	border: black solid 1px;
+	padding: 10px;
+	margin: 10px;
+}
+.header{
+	font-weight: bold;
+	margin-left:30px;
+}
+.details{
+	text-align: center;
+>>>>>>> 89cd69534a0e367a64848f9cf04405e1a85a0025
 }
