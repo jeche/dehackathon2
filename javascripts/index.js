@@ -1,46 +1,23 @@
-function placeFigure(e) {
-	var topPosition = $(sticky).css("top");
-	//alert(topPosition);
-	var leftPosition = $(sticky).css("left");
-	//alert(leftPosition);
-	var direction = getDirection(topPosition, leftPosition);
-	if (direction == "down") {
-		topPosition = topPosition.replace(/[^\d]/g, '');
-		topPosition = parseInt(topPosition);
-		$(sticky).css("top", (topPosition + 129) + "px");
-		popup();
-	}
-	else if (direction == "right") {
-		leftPosition = leftPosition.replace(/[^\d]/g, '');
-		leftPosition = parseInt(leftPosition);
-		$(sticky).css("left", (leftPosition + 129) + "px");
-		popup();
-	}
-	else if (direction == "left") {
-		leftPosition = leftPosition.replace(/[^\d]/g, '');
-		leftPosition = parseInt(leftPosition);
-		$(sticky).css("left", (leftPosition - 129) + "px");
-		popup();
-	}
+var count = 1;
+
+function placeFigure() {
+	$("div#sticky" + count + " > img").toggleClass("hiding");
+	console.log($("div#sticky" + count));
+	count++;
+	
+	$("div#sticky" + count + " > img").toggleClass("hiding");
+;
+	console.log($("div#sticky" + count + " > img"));
+	return count;
 }
 
-function getDirection(top, left) {
-	if ((top == "35px"  || top == "293px" || top == "551px") && left != "556px" ) {
-		return "right";
-	}
+$(document).ready(function () {
+	$("button#start").click(function () {
+		count = placeFigure();
+		console.log(count);
+	});
 	
-	else if ((top == "35px"  || top == "293px" || top == "551px") && left == "556px") {
-		return "down";
-	}
-	
-	else if (left == "40px") {
-		return "down";
-	}
-	
-	else {
-		return "left";
-	}
-}
+});
 
 function popup()
 {
