@@ -18,3 +18,15 @@ $(document).ready(function () {
 	});
 	
 });
+
+function popup()
+{
+	if (! window.focus)return true;
+	var href='../views/itemInfoMessage.html';
+	window.open(href, 'notes', 'width=700,height=700');
+	return false;
+}
+
+function closePopUp(){
+	window.close();
+}
