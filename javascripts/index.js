@@ -1,3 +1,3 @@
-function placeFigure() {
-	
+function placeFigure(e) {
+	alert("here!");
 }
