@@ -1,0 +1,12 @@
+.frame{
+	border: black solid 1px;
+	padding: 15px;
+	margin: 10px;
+}
+.itemHeading{
+	font-weight: bold;
+}
+
+.price {
+	text-align: right;
+}
