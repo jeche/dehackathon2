@@ -1,12 +1,30 @@
-.frame{
+table thead tr th{
+	border-bottom: black solid 1px;
+}
+.itemListing{
 	border: black solid 1px;
+	width: 500px;
 	padding: 15px;
 	margin: 10px;
 }
-.itemHeading{
+.frame-header{
+	border: black solid 1px;
+	padding: none;
+	margin: none;
+	
+}
+.itemHeader{
 	font-weight: bold;
 }
 
 .price {
-	text-align: right;
+	padding-left: 50px;
+	 
+}
+.itemImage{
+	border: black solid 1px;
+}
+.header{
+	font-weight: bold;
+	margin-left:20px;
 }
