@@ -1,5 +1,5 @@
 body {
-	background-image: url('../images/map2.png');
+	background-image: url('../images/mapNoBushes.png');
 	background-repeat: no-repeat;
 	background-size: cover;
   	position: absolute;
@@ -16,12 +16,18 @@ body {
 }
 
 .outer {
+	text-align: center;
 	position: relative;
     float: left;
     width: 20%;
-    height: 20%;
+    height: 18.5%;
     display:inline-block;
 }
+
+.top {
+	margin-top: 5%;
+}
+
 
 .hiding {
 	display:none;
