@@ -8,16 +8,19 @@ function placeFigure(e) {
 		topPosition = topPosition.replace(/[^\d]/g, '');
 		topPosition = parseInt(topPosition);
 		$(sticky).css("top", (topPosition + 129) + "px");
+		popup();
 	}
 	else if (direction == "right") {
 		leftPosition = leftPosition.replace(/[^\d]/g, '');
 		leftPosition = parseInt(leftPosition);
 		$(sticky).css("left", (leftPosition + 129) + "px");
+		popup();
 	}
 	else if (direction == "left") {
 		leftPosition = leftPosition.replace(/[^\d]/g, '');
 		leftPosition = parseInt(leftPosition);
 		$(sticky).css("left", (leftPosition - 129) + "px");
+		popup();
 	}
 }
 
@@ -37,4 +40,16 @@ function getDirection(top, left) {
 	else {
 		return "left";
 	}
+}
+
+function popup()
+{
+	if (! window.focus)return true;
+	var href='../views/itemInfoMessage.html';
+	window.open(href, 'notes', 'width=700,height=700');
+	return false;
+}
+
+function closePopUp(){
+	window.close();
 }
