@@ -2,7 +2,9 @@
 <html>
 <head>
 <script src="../javascripts/index.js"></script>
-
+<script src="../javascripts/bootstrap.js"></script>
+<link rel="stylesheet" type="text/css" href="../styles/bootstrap-responsive.css">
+<link rel="stylesheet" type="text/css" href="../styles/bootstrap.css">
 <link rel="stylesheet" type="text/css" href="../styles/itemInfoMessage.css">
 
 </head>
@@ -19,7 +21,7 @@
 	<tbody>
 		<tr>
 			<td><img src="../images/bike.jpg" class="itemImage"></span></td>
-			<td>Details go here</td>
+			<td ><span class="details">Details go here</span></td>
 		</tr>
 	</tbody>
 </table>
@@ -33,9 +35,10 @@
 	<tbody>
 		<tr>
 			<td><img src="../images/bike.jpg" class="itemImage"></span></td>
-			<td>Details go here</td>
+			<td ><span class="details">Details go here</span></td>
 		</tr>
 	</tbody>
 </table>
+<div style="text-align: center"><button type="button" onClick="closePopUp()" class="btn btn-success">CLOSE</button></div>
 </body>
 </html>
