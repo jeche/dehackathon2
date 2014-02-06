@@ -3,13 +3,14 @@
 <head>
 <script src="../javascripts/index.js"></script>
 <script src="../javascripts/itemInfoMessage.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.4.3/jquery.min.js"></script>
 </head>
 
 <body>
 <div><a href='../views/itemInfoMessage.html' onClick="return popup(this,'notes')">Click me</a></div>
 <img style="position: relative; top: 0; left: 0;" src="../images/test2.png"/>
-<img id="sticky" style="position: relative; absolute; top: 30px; left: 70px;" src="../images/stickfigureTransparent.png"/>
+<img id="sticky" style="position: absolute; top: 35px; left: 40px;" src="../images/stickfigureTransparent.png"/>
 <button onclick="placeFigure()">Start Game</button>
-<button>New Game</button>
+<button onclick="placeFigure()">New Game</button>
 </body>
 </html>
