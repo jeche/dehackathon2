@@ -11,6 +11,14 @@ function get_cycle_list(minu, maxi){
 			console.log(data);
 			ac = data.access_token;
 			$.ajax("https://apis.traderonline.com/vlatest/cycles", {
+	var result = [];
+	$.ajax("https://apis.traderonline.com/v1.0.0-beta/token", {
+		type:"POST",
+		data: secret_things,
+		success:function(data) {
+			console.log(data);
+			ac = data.access_token;
+			$.ajax("https://apis.traderonline.com/v1.0.0-beta/cycles", {
 					type:"GET",
 					headers: {"Authorization" : "Bearer " + data.access_token},
 					data:{  
@@ -28,10 +36,27 @@ function get_cycle_list(minu, maxi){
 								headers: {"Authorization" : "Bearer " + ac},
 								success:function(data){
 									
+							$.ajax("https://apis.traderonline.com/v1.0.0-beta/cycles/" + data.result[i].id, {
+								type:"GET",
+								headers: {"Authorization" : "Bearer " + ac},
+								success:function(data){
+									console.log(data);
+									var newGuy = {"description":data.result.description,
+												  "year":data.result.year,
+												  "makeDisplayName":data.result.makeDisplayName,
+												  "price":data.result.price,
+												  "photos":data.result.photos,
+												  "mileage":data.result.mileage,
+												  "primaryColor":data.result.primaryColor,
+												  "url":data.url
+									};
+									result.push(newGuy);
 								},
 								dataType:"JSON"	
 							});
 						}
+
+						console.log(result);
 						
 					},
 					dataType:"JSON",
@@ -44,4 +69,7 @@ function get_cycle_list(minu, maxi){
 		},
 		dataType:"JSON"
 	}); 
+
+	return result;
+
 } 
