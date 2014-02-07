@@ -4,71 +4,85 @@ function getData(){
 	var usedArray = JSON.stringify([]);
 	localStorage.setItem("usedArray", usedArray);
 	
-	var lowPrice = 100000000;
-	var highPrice = 0;
-	var l = 0, h = 0;
-
-for(var i = 0; i < pug.length; i++){
-	if(pug[i].price < lowPrice){
-		lowPrice = pug[i].price;
-		l = i;
-	}
-	if(pug[i].price > highPrice){
-		highPrice = pug[i].price;
-		h = i;
-	}
-}										
-	var item1 = document.getElementById("item1");
-	item1.textContent = pug[h].makeDisplayName;
-	var item2 = document.getElementById("item2");
-	item2.textContent = pug[l].makeDisplayName;
-
-	var price1 = document.getElementById("price1");
-	price1.textContent = pug[h].price;
-
-	var price2 = document.getElementById("price2");
-	price2.textContent = pug[l].price;
-
-	var img1 = document.getElementById("img1");
-	img1.setAttribute('src', pug[h].photos[0].url);
-
-	var img2 = document.getElementById("img2");
-	img2.setAttribute('src', pug[l].photos[0].url);
-
-	var info1 = document.getElementById("info1");
-	info1.textContent = pug[h].description;
-
-	var info2 = document.getElementById("info2");
-	info2.textContent = pug[l].description;
+	var f = 0, s = 0;
+	var inflateBy = 0;
+	var inflate = 0;
+	var inflatedPrice = 0;
+	var priceToInflate = 0;
+			
+	f = randomIntFromInterval(0, pug.length - 1);
+	s = randomIntFromInterval(0, pug.length - 1);
+	inflateBy = randomIntFromInterval(5, 15);
+	inflate = randomIntFromInterval(0, 1); 			
 	
 	usedArray = JSON.parse(localStorage.getItem("usedArray"));		
-	pug[h].idNo = 1;
-	usedArray.push(pug[h]);
+	pug[f].idNo = "1";	
+	pug[s].idNo = "2";
+								
+	var item1 = document.getElementById("item1");
+	item1.textContent = pug[f].makeDisplayName;
+	
+	var item2 = document.getElementById("item2");
+	item2.textContent = pug[s].makeDisplayName;
+	
+	var price1 = document.getElementById("price1");
+	var price2 = document.getElementById("price2");
+
+	if(inflate == 0){
+		priceToInflate = parseInt(pug[f].price, 10);
+		inflatedPrice = priceToInflate + priceToInflate * (inflateBy/100);		
+		price1.textContent = inflatedPrice.toFixed(0);
+		price2.textContent = pug[s].price;
+		pug[f].inflatedPrice = inflatedPrice.toFixed(0);
+	}	
+	else if(inflate == 1){
+		priceToInflate = parseInt(pug[s].price, 10);
+		inflatedPrice = priceToInflate + priceToInflate * (inflateBy/100);		
+		price2.textContent = inflatedPrice.toFixed(0);
+		price1.textContent = pug[f].price;
+		pug[s].inflatedPrice = inflatedPrice.toFixed(0);
+		
+	}
+
+	var img1 = document.getElementById("img1");
+	img1.setAttribute('src', pug[f].photos[0].url);
+
+	var img2 = document.getElementById("img2");
+	img2.setAttribute('src', pug[s].photos[0].url);
+
+	var info1 = document.getElementById("info1");
+	info1.textContent = "Model: "+ pug[f].makeDisplayName + "\n Year: " + pug[f].year ;
+
+	var info2 = document.getElementById("info2");
+	info2.textContent = pug[s].description;
+	
+	usedArray.push(pug[f]);
 	localStorage.setItem("usedArray", JSON.stringify(usedArray));
-	pug[l].idNo = 2;
-	usedArray.push(pug[l]);	
+	usedArray.push(pug[s]);	
 	localStorage.setItem("usedArray", JSON.stringify(usedArray));
 	
-	if(h > l){
-		if(h > -1){
-			pug.splice(h, 1);
+	if(f > s){
+		if(f > -1){
+			pug.splice(f, 1);
 			localStorage.setItem("bikeArray", JSON.stringify(pug));
 		}
-		if(l > -1){
-			pug.splice(l, 1);
+		if(s > -1){
+			pug.splice(s, 1);
 			localStorage.setItem("bikeArray", JSON.stringify(pug));
 		}
 	}
 	else {
-		if(l > -1){
-			pug.splice(l, 1);
+		if(s > -1){
+			pug.splice(s, 1);
 			localStorage.setItem("bikeArray", JSON.stringify(pug));
 		}
-		if(h > -1){
-			pug.splice(h, 1);
+		if(f > -1){
+			pug.splice(f, 1);
 			localStorage.setItem("bikeArray", JSON.stringify(pug));
 		}
 	}
+	
+	
 							
 
 }
@@ -97,3 +111,7 @@ function setFlag(selection){
 	closePopUp();
 }
 
+function randomIntFromInterval(min,max)
+{
+    return Math.floor(Math.random()*(max-min+1)+min);
+}
