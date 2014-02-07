@@ -1,7 +1,9 @@
 function getData(){
 	
 	var pug = JSON.parse(localStorage.getItem("bikeArray"));
-	var boughtBikeArray = JSON.parse(localStorage.getItem("boughtBikeArray"));
+	var usedArray = JSON.stringify([]);
+	localStorage.setItem("usedArray", usedArray);
+	
 	var lowPrice = 100000000;
 	var highPrice = 0;
 	var l = 0, h = 0;
@@ -38,11 +40,14 @@ for(var i = 0; i < pug.length; i++){
 
 	var info2 = document.getElementById("info2");
 	info2.textContent = pug[l].description;
-			
-	boughtBikeArray.push(pug[h]);
-	localStorage.setItem("boughtBikeArray", JSON.stringify(boughtBikeArray));	
-	boughtBikeArray.push(pug[l]);	
-	localStorage.setItem("boughtBikeArray", JSON.stringify(boughtBikeArray));	
+	
+	usedArray = JSON.parse(localStorage.getItem("usedArray"));		
+	pug[h].idNo = 1;
+	usedArray.push(pug[h]);
+	localStorage.setItem("usedArray", JSON.stringify(usedArray));
+	pug[l].idNo = 2;
+	usedArray.push(pug[l]);	
+	localStorage.setItem("usedArray", JSON.stringify(usedArray));
 	
 	if(h > l){
 		if(h > -1){
@@ -66,5 +71,29 @@ for(var i = 0; i < pug.length; i++){
 	}
 							
 
+}
+
+function setFlag(selection){
+	var boughtBikeArray = JSON.parse(localStorage.getItem("boughtBikeArray"));
+	var notBoughtArray = JSON.parse(localStorage.getItem("notBoughtArray"));
+	var usedArray = JSON.parse(localStorage.getItem("usedArray"));
+	
+	if(selection === 1){
+		if(usedArray[0].idNo === 1){
+				boughtBikeArray.push(usedArray[0]);
+				localStorage.setItem("boughtBikeArray", JSON.stringify(boughtBikeArray));
+				notBoughtArray.push(usedArray[1]);
+				localStorage.setItem("notBoughtArray", JSON.stringify(notBoughtArray));	
+				
+				
+		} 
+		
+	}else{
+		boughtBikeArray.push(usedArray[1]);
+				localStorage.setItem("boughtBikeArray", JSON.stringify(boughtBikeArray));
+				notBoughtArray.push(usedArray[0]);
+				localStorage.setItem("notBoughtArray", JSON.stringify(notBoughtArray));	
+	}
+	closePopUp();
 }
 
