@@ -9,8 +9,9 @@ function placeFigure() {
 	return count;
 }
 
-$(document).ready(function (){
-	
+$(document).ready(function() {
+	var bikeArray = JSON.stringify([]);
+	localStorage.setItem("bikeArray", bikeArray);
 	$("button#start").click(function () {
 		count = placeFigure();
 		if (count == 2) {
@@ -23,8 +24,7 @@ $(document).ready(function (){
 		}
 		console.log(count);
 	});
-	
-	
+
 });
 
 function popup()
