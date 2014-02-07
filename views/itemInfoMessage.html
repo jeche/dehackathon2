@@ -2,40 +2,46 @@
 <html>
 <head>
 <script src="../javascripts/index.js"></script>
+<script src="../javascripts/jquery.js"></script>
 <script src="../javascripts/bootstrap.js"></script>
+<script src="../javascripts/secret.js"></script>
+
+<script src="../controllers/apicontroller.js"></script>
+<script src="../javascripts/itemInfoMessage.js"></script>
+<script src="../javascripts/knockout.js"></script>
 <link rel="stylesheet" type="text/css" href="../styles/bootstrap-responsive.css">
 <link rel="stylesheet" type="text/css" href="../styles/bootstrap.css">
 <link rel="stylesheet" type="text/css" href="../styles/itemInfoMessage.css">
 
 </head>
 
-<body>
+<body onload="get_cycle_list(0.0, 1000000.0)">
 <h2 class="header">Which item would you like to purchase?</h2>
 <table class="itemListing">
 	<thead class="frame-heading">
 		<tr>
-			<th style='text-align:left'><span class="itemHeader">Bike 1</span></th>
-			<th style='text-align:right'><span class="price">$XXX</span></th>
+			<th style='text-align:left'><span class="itemHeader" id="item1"></span></th>
+			<th style='text-align:right'><span class="price" id="price1"></span></th>
 		</tr>		
 	</thead>
 	<tbody>
 		<tr>
-			<td><img src="../images/bike.jpg" class="itemImage"></span></td>
-			<td ><span class="details">Details go here</span></td>
+			<td><img class="itemImage" id="img1"/></td>
+			<td ><span class="details" id="info1"></span></td>
 		</tr>
 	</tbody>
 </table>
 <table class="itemListing">
 	<thead class="frame-heading">
 		<tr>
-			<th style='text-align:left'><span class="itemHeader">Bike 2</span></th>
-			<th style='text-align:right'><span class="price">$XXX</span></th>
+			<th style='text-align:left'><span class="itemHeader" id="item2"></span></th>
+			<th style='text-align:right'><span class="price" id="price2"></span></th>
 		</tr>		
 	</thead>
 	<tbody>
 		<tr>
-			<td><img src="../images/bike.jpg" class="itemImage"></span></td>
-			<td ><span class="details">Details go here</span></td>
+			<td><img class="itemImage" id="img2"></td>
+			<td ><span class="details" id="info2"></span></td>
 		</tr>
 	</tbody>
 </table>

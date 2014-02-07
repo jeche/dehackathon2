@@ -1,22 +1,9 @@
-<<<<<<< HEAD
-.frame{
-	border: black solid 1px;
-	padding: 15px;
-	margin: 10px;
-}
-.itemHeading{
-	font-weight: bold;
-}
-
-.price {
-	text-align: right;
-=======
 table thead tr{
 	border: black solid 1px;
 }
 .itemListing{
 	border: black solid 1px;
-	width: 500px;
+	width: 600px;
 	padding: 15px;
 	margin: 10px;
 }
@@ -38,6 +25,8 @@ table thead tr{
 	border: black solid 1px;
 	padding: 10px;
 	margin: 10px;
+	width: 300px;
+	height: 200px;
 }
 .header{
 	font-weight: bold;
@@ -45,5 +34,6 @@ table thead tr{
 }
 .details{
 	text-align: center;
->>>>>>> 89cd69534a0e367a64848f9cf04405e1a85a0025
+	padding: 5px;
+
 }
