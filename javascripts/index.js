@@ -1,3 +1,4 @@
+
 var count = 1;
 
 function placeFigure() {
@@ -24,7 +25,9 @@ function popup()
 {
 	if (! window.focus)return true;
 	var href='../views/itemInfoMessage.html';
-	window.open(href, 'notes', 'width=700,height=700');
+	window.open(href, 'notes', 'width=650,height=700');
+
+
 	return false;
 }
 
