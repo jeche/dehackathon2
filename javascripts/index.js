@@ -1,19 +1,21 @@
+
 var count = 1;
 
 function placeFigure() {
 	$("div#sticky" + count + " > img").toggleClass("hiding");
-	console.log($("div#sticky" + count));
 	count++;
-	
 	$("div#sticky" + count + " > img").toggleClass("hiding");
-;
-	console.log($("div#sticky" + count + " > img"));
 	return count;
 }
 
 $(document).ready(function () {
 	$("button#start").click(function () {
 		count = placeFigure();
+		if (count == 25) {
+			alert("here!");
+			$('#myModal').modal('toggle');
+			//window.location.replace("../views/ending.html");
+		}
 		console.log(count);
 	});
 	
@@ -23,7 +25,9 @@ function popup()
 {
 	if (! window.focus)return true;
 	var href='../views/itemInfoMessage.html';
-	window.open(href, 'notes', 'width=700,height=700');
+	window.open(href, 'notes', 'width=650,height=700');
+
+
 	return false;
 }
 
