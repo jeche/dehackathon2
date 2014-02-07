@@ -1,8 +1,6 @@
 function getBikes() {
 	var bikeArray = JSON.parse(localStorage.getItem("bikeArray"));
-<<<<<<< HEAD
-	
-	for (var i = 0; i < 25; i++) {
+	for (var i = 0; i < bikeArray.length; i++) {
 		var bike = bikeArray[i];
 		$("div#bikes").append('<table class="itemListing">\
 		<thead class="frame-heading">\
@@ -22,9 +20,5 @@ function getBikes() {
 		</tr>\
 		</tbody>\
 		</table>');
-=======
-	for (var i = 0; i < bikeArray.length; i++) {
-		
->>>>>>> 7b35c6a425e9b41d699b52ccfdb1aae99d77e814
 	}
 }

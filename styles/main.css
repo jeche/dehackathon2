@@ -1,11 +1,7 @@
 body {
 	background-image: url('../images/longMap.png');
 	background-repeat: no-repeat;
-<<<<<<< HEAD
 	background-size: cover;
-=======
-	background-size: cover;	
->>>>>>> 7b35c6a425e9b41d699b52ccfdb1aae99d77e814
   	position: absolute;
   	top: 0;
   	bottom: 0;
