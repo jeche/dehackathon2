@@ -10,8 +10,6 @@ function placeFigure() {
 }
 
 $(document).ready(function() {
-	var bikeArray = JSON.stringify([]);
-	localStorage.setItem("bikeArray", bikeArray);
 	$("button#start").click(function () {
 		count = placeFigure();
 		if (count == 2) {
