@@ -1,23 +1,22 @@
 <!DOCTYPE html>
 <html>
 <head>
-<script src="../javascripts/index.js"></script>
-<script src="../javascripts/jquery.js"></script>
-<script src="../javascripts/bootstrap.js"></script>
+	<script src="../javascripts/jquery.js"></script>
 <script src="../javascripts/secret.js"></script>
-
 <script src="../controllers/apicontroller.js"></script>
+<script src="../javascripts/index.js"></script>
+<script src="../javascripts/bootstrap.js"></script>
+
+
+
 <script src="../javascripts/itemInfoMessage.js"></script>
 <script src="../javascripts/knockout.js"></script>
 <link rel="stylesheet" type="text/css" href="../styles/bootstrap-responsive.css">
 <link rel="stylesheet" type="text/css" href="../styles/bootstrap.css">
 <link rel="stylesheet" type="text/css" href="../styles/itemInfoMessage.css">
-<script type="javascript">
-	get_cycle_list(0.0, 1000000.0);
-</script>
 </head>
 
-<body onload="weAreReady()">
+<body onload="getData()">
 <h2 class="header">Which item would you like to purchase?</h2>
 <table class="itemListing">
 	<thead class="frame-heading">
