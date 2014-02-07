@@ -5,12 +5,18 @@ function placeFigure() {
 	$("div#sticky" + count + " > img").toggleClass("hiding");
 	count++;
 	$("div#sticky" + count + " > img").toggleClass("hiding");
+	popup();
 	return count;
 }
 
 $(document).ready(function () {
+	var bikeArray = JSON.stringify([]);
+	localStorage.setItem("bikeArray", bikeArray);
 	$("button#start").click(function () {
 		count = placeFigure();
+		if (count == 2) {
+			$("button#start").html("Continue");
+		}
 		if (count == 25) {
 			alert("here!");
 			$('#myModal').modal('toggle');
