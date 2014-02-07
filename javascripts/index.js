@@ -9,7 +9,7 @@ function placeFigure() {
 	return count;
 }
 
-function weAreReady() {
+$(document).ready(function() {
 	var bikeArray = JSON.stringify([]);
 	localStorage.setItem("bikeArray", bikeArray);
 	$("button#start").click(function () {
@@ -26,7 +26,7 @@ function weAreReady() {
 	});
 	getData();
 	
-}
+});
 
 function popup()
 {
