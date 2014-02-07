@@ -14,7 +14,7 @@ function placeFigure() {
 $(document).ready(function() {
 
 	$("button#start").click(function () {
-		
+
 		//console.log(count);
 		window.location.href='itemInfoMessage.html';
 	});

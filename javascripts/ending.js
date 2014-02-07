@@ -1,7 +1,7 @@
 function getBikes() {
 	var bikeArray = JSON.parse(localStorage.getItem("boughtBikeArray"));
 	var secondArray = JSON.parse(localStorage.getItem("notBoughtArray"));
-	
+	var count = 0;
 	for (var i = 0; i < bikeArray.length; i++) {
 		var bike = bikeArray[i];
 		if(bike.makeDisplayName === null || bike.makeDisplayName === 'undefined'){
@@ -31,6 +31,7 @@ function getBikes() {
 		}
 		
 		if (bike.inflatedPrice != null){
+			count++;
 			var lost = bike.inflatedPrice - bike.price;
 			$("div#collapseOne").append('<table class="itemListing center">\
 			<thead class="frame-heading">\
@@ -90,6 +91,8 @@ function getBikes() {
 			</table>');
 		}
 	}
+	
+	$("span#number").append(count);
 		
 	for (var i = 0; i < secondArray.length; i++) {
 		var bike = secondArray[i];
