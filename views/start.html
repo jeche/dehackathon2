@@ -3,6 +3,8 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en">
 	<head>
+		<script src="../javascripts/jquery.js"></script>
+		<script src="../javascripts/start.js"></script>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 		<title>start</title>
 		<meta name="author" content="Andrew" />
@@ -11,17 +13,17 @@
     	<link href="../styles/start.css" rel="stylesheet">
     	<link href="../styles/bootstrap-responsive.css" rel="stylesheet">
 	</head>
-	<body>
+	<body onload="get_cycle_list(0.0, 1000000.0)">
 		
 	<div style="position:absolute; top:10%; left:40%;">
 
-		<button onclick="window.location.href='views/index.html'" style="position:relative;" class="btn btn-warning btn-large">Start Game</button>
+		<button style="position:relative;" class="btn btn-warning btn-large" id="start">Start Game</button>
 
 	</div>
-	<div class="Image">
+	<!--<div class="Image">
         <a href="index.html" ></a>
          <image src="../images/start_buttonTransparent2.png"></image>
-    </div>
+ 	</div>-->
 
 	</body>
 </html>

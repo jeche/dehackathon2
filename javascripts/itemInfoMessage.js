@@ -169,7 +169,8 @@ function setFlag(selection){
 				notBoughtArray.push(usedArray[0]);
 				localStorage.setItem("notBoughtArray", JSON.stringify(notBoughtArray));	
 	}
-	closePopUp();
+	
+	//closePopUp();
 }
 
 function randomIntFromInterval(min,max)
