@@ -18,7 +18,6 @@ $(document).ready(function() {
 			$("button#start").html("Continue");
 		}
 		if (count == 25) {
-			alert("here!");
 			$('#myModal').modal('toggle');
 			//window.location.replace("../views/ending.html");
 		}
