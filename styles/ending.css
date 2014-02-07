@@ -30,3 +30,8 @@ body {
 .accordion-heading {
 	background-color: #C0C0C0;
 }
+
+#bikes {
+	width: 75%;
+	margin: 0 auto;
+}
