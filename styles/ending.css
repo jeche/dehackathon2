@@ -18,3 +18,20 @@ body {
 	max-width: 200px;
 	max-height: 150px;
 }
+
+#collapseOne {
+	background-color: white;
+}
+
+#collapseTwo {
+	background-color: white;
+}
+
+.accordion-heading {
+	background-color: #C0C0C0;
+}
+
+#bikes {
+	width: 75%;
+	margin: 0 auto;
+}

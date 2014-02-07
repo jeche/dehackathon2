@@ -28,7 +28,30 @@
 
   	<h1>Congratulations!  You made x good decisions.</h1>
   	<h3>Here are the bikes you saw today:</h3>
-  	<div id="bikes"></div>
+  	<div id="bikes">
+  		<div class="accordion" id="accordion2">
+			<div class="accordion-group">
+				<div class="accordion-heading">
+					<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">
+					Bikes you bought
+					</a>
+				</div>
+				<div id="collapseOne" class="accordion-body collapse">
+				<div class="accordion-inner">
+				</div>
+			</div>
+			<div class="accordion-group">
+				<div class="accordion-heading">
+					<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo">
+					Bikes you didn't buy
+					</a>
+				</div>
+				<div id="collapseTwo" class="accordion-body collapse">
+				<div class="accordion-inner">
+				</div>
+			</div>
+		</div>
+  	</div>
   	<script>getBikes();</script>
   	<div id="button">
 		<a href="../views/index.html" class="btn btn-large btn-warning">Start a new game</a>
