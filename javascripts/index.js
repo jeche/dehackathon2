@@ -3,19 +3,25 @@ var count = 1;
 
 function placeFigure() {
 	$("div#sticky" + count + " > img").toggleClass("hiding");
-	console.log($("div#sticky" + count));
 	count++;
-	
 	$("div#sticky" + count + " > img").toggleClass("hiding");
-;
-	console.log($("div#sticky" + count + " > img"));
 	popup();
 	return count;
 }
 
 $(document).ready(function () {
+	var bikeArray = JSON.stringify([]);
+	localStorage.setItem("bikeArray", bikeArray);
 	$("button#start").click(function () {
 		count = placeFigure();
+		if (count == 2) {
+			$("button#start").html("Continue");
+		}
+		if (count == 25) {
+			alert("here!");
+			$('#myModal').modal('toggle');
+			//window.location.replace("../views/ending.html");
+		}
 		console.log(count);
 	});
 	
