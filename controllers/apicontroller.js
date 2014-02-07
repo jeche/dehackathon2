@@ -6,7 +6,6 @@ function get_cycle_list(minu, maxi){
 	var boughtBikeArray = JSON.stringify([]);
 	localStorage.setItem("boughtBikeArray", boughtBikeArray);
 	
-
 	var notBoughtArray = JSON.stringify([]);
 	localStorage.setItem("notBoughtArray", notBoughtArray);
 	

@@ -1,3 +1,6 @@
+table {
+	background-color: white;
+}
 table thead tr{
 	border: black solid 1px;
 }
