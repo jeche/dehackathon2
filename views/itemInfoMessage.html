@@ -1,22 +1,20 @@
 <!DOCTYPE html>
 <html>
 <head>
-<script src="../javascripts/index.js"></script>
 <script src="../javascripts/jquery.js"></script>
-<script src="../javascripts/bootstrap.js"></script>
 <script src="../javascripts/secret.js"></script>
-
 <script src="../controllers/apicontroller.js"></script>
+<script src="../javascripts/index.js"></script>
+<script src="../javascripts/bootstrap.js"></script>
 <script src="../javascripts/itemInfoMessage.js"></script>
 <script src="../javascripts/knockout.js"></script>
 <link rel="stylesheet" type="text/css" href="../styles/bootstrap-responsive.css">
 <link rel="stylesheet" type="text/css" href="../styles/bootstrap.css">
 <link rel="stylesheet" type="text/css" href="../styles/itemInfoMessage.css">
-
 </head>
 
-<body onload="get_cycle_list(0.0, 1000000.0)">
-<h2 class="header">Which item would you like to purchase?</h2>
+<body onload="getData()">
+<h2 class="header">Choose the better deal:</h2>
 <table class="itemListing">
 	<thead class="frame-heading">
 		<tr>
@@ -27,7 +25,7 @@
 	<tbody>
 		<tr>
 			<td><img class="itemImage" id="img1"/></td>
-			<td ><span class="details" id="info1"></span></td>
+			<td class="details"><span id="info1"></span></td>
 		</tr>
 	</tbody>
 </table>
@@ -41,10 +39,10 @@
 	<tbody>
 		<tr>
 			<td><img class="itemImage" id="img2"></td>
-			<td ><span class="details" id="info2"></span></td>
+			<td class="details"><span id="info2"></span></td>
 		</tr>
 	</tbody>
 </table>
-<div style="text-align: center"><button type="button" onClick="closePopUp()" class="btn btn-success">CLOSE</button></div>
+<div style="text-align: center"><button type="button" onClick="closePopUp()" class="btn btn-success" style="margin: 5px">CLOSE</button></div>
 </body>
 </html>

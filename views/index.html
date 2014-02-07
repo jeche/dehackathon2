@@ -7,17 +7,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-    <script src="../javascripts/bootstrap.js"></script>
-	<script src="../javascripts/index.js"></script>
+    <script src="../javascripts/jquery.js"></script>
+<script src="../javascripts/secret.js"></script>
+<script src="../controllers/apicontroller.js"></script>
+<script src="../javascripts/index.js"></script>
+<script src="../javascripts/bootstrap.js"></script>
 	<script src="../javascripts/itemInfoMessage.js"></script>
+	
     <!-- Le styles -->
     <link href="../styles/bootstrap.css" rel="stylesheet">
     <link href="../styles/main.css" rel="stylesheet">
     <link href="../styles/bootstrap-responsive.css" rel="stylesheet">
   </head>
 
-  <body>
+  <body onload="get_cycle_list(0.0, 1000000.0)">
   	<div id="myModal" class="modal hide fade">
 	    <div class="modal-header">
 	    	<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
@@ -33,79 +36,79 @@
     
 	<div id="divs">
 		<div class="outer top side" id="sticky1">
-			<img src="../images/puppy64pxGIFdirt.gif"/>
+			<img src="../images/puppyWithBikeCropped64px.gif"/>
 		</div>	
 		<div class="outer top" id="sticky2">
-			<img class="hiding" src="../images/puppy64pxGIFdirt.gif"/>
+			<img class="hiding" src="../images/puppyWithBikeCropped64px.gif"/>
 		</div>
 		<div class="outer top" id="sticky3">
-			<img class="hiding" src="../images/puppy64pxGIFdirt.gif"/>
+			<img class="hiding" src="../images/puppyWithBikeCropped64px.gif"/>
 		</div>
 		<div class="outer top" id="sticky4">
-			<img class="hiding" src="../images/puppy64pxGIFdirt.gif"/>
+			<img class="hiding" src="../images/puppyWithBikeCropped64px.gif"/>
 		</div>
 		<div class="outer top" id="sticky5">
-			<img class="hiding" src="../images/puppy64pxGIFdirt.gif"/>
+			<img class="hiding" src="../images/puppyWithBikeCropped64px.gif"/>
 		</div>
 		<div class="outer" id="sticky10">
-			<img class="hiding" src="../images/puppy64pxGIFdirt.gif"/>
+			<img class="hiding" src="../images/puppyWithBikeCropped64px.gif"/>
 		</div>
 		<div class="outer" id="sticky9">
-			<img class="hiding" src="../images/puppy64pxGIFdirt.gif"/>
+			<img class="hiding" src="../images/puppyWithBikeCropped64px.gif"/>
 		</div>
 		<div class="outer" id="sticky8">
-			<img class="hiding" src="../images/puppy64pxGIFdirt.gif"/>
+			<img class="hiding" src="../images/puppyWithBikeCropped64px.gif"/>
 		</div>
 		<div class="outer" id="sticky7">
-			<img class="hiding" src="../images/puppy64pxGIFdirt.gif"/>
+			<img class="hiding" src="../images/puppyWithBikeCropped64px.gif"/>
 		</div>
 		<div class="outer" id="sticky6">
-			<img class="hiding" src="../images/puppy64pxGIFdirt.gif"/>
+			<img class="hiding" src="../images/puppyWithBikeCropped64px.gif"/>
 		</div>
 		<div class="outer middle" id="sticky11">
-			<img class="hiding" src="../images/puppy64pxGIFdirt.gif"/>
+			<img class="hiding" src="../images/puppyWithBikeCropped64px.gif"/>
 		</div>
 		<div class="outer middle" id="sticky12">
-			<img class="hiding" src="../images/puppy64pxGIFdirt.gif"/>
+			<img class="hiding" src="../images/puppyWithBikeCropped64px.gif"/>
 		</div>
 		<div class="outer middle" id="sticky13">
-			<img class="hiding" src="../images/puppy64pxGIFdirt.gif"/>
+			<img class="hiding" src="../images/puppyWithBikeCropped64px.gif"/>
 		</div>
 		<div class="outer middle" id="sticky14">
-			<img class="hiding" src="../images/puppy64pxGIFdirt.gif"/>
+			<img class="hiding" src="../images/puppyWithBikeCropped64px.gif"/>
 		</div>
 		<div class="outer middle" id="sticky15">
-			<img class="hiding" src="../images/puppy64pxGIFdirt.gif"/>
+			<img class="hiding" src="../images/puppyWithBikeCropped64px.gif"/>
 		</div>
 		<div class="outer middle2" id="sticky20">
-			<img class="hiding" src="../images/puppy64pxGIFdirt.gif"/>
+			<img class="hiding" src="../images/puppyWithBikeCropped64px.gif"/>
 		</div>
 		<div class="outer middle2" id="sticky19">
-			<img class="hiding" src="../images/puppy64pxGIFdirt.gif"/>
+			<img class="hiding" src="../images/puppyWithBikeCropped64px.gif"/>
 		</div>
 		<div class="outer middle2" id="sticky18">
-			<img class="hiding" src="../images/puppy64pxGIFdirt.gif"/>
+			<img class="hiding" src="../images/puppyWithBikeCropped64px.gif"/>
 		</div>
 		<div class="outer middle2" id="sticky17">
-			<img class="hiding" src="../images/puppy64pxGIFdirt.gif"/>
+			<img class="hiding" src="../images/puppyWithBikeCropped64px.gif"/>
 		</div>
 		<div class="outer middle2" id="sticky16">
-			<img class="hiding" src="../images/puppy64pxGIFdirt.gif"/>
+			<img class="hiding" src="../images/puppyWithBikeCropped64px.gif"/>
 		</div>
 		<div class="outer middle" id="sticky21">
-			<img class="hiding" src="../images/puppy64pxGIFdirt.gif"/>
+			<img class="hiding" src="../images/puppyWithBikeCropped64px.gif"/>
 		</div>
 		<div class="outer middle" id="sticky22">
-			<img class="hiding" src="../images/puppy64pxGIFdirt.gif"/>
+			<img class="hiding" src="../images/puppyWithBikeCropped64px.gif"/>
 		</div>
 		<div class="outer middle" id="sticky23">
-			<img class="hiding" src="../images/puppy64pxGIFdirt.gif"/>
+			<img class="hiding" src="../images/puppyWithBikeCropped64px.gif"/>
 		</div>
 		<div class="outer middle" id="sticky24">
-			<img class="hiding"  src="../images/puppy64pxGIFdirt.gif"/>
+			<img class="hiding"  src="../images/puppyWithBikeCropped64px.gif"/>
 		</div>
 		<div class="outer middle" id="sticky25">
-			<img class="hiding"  src="../images/puppy64pxGIFdirt.gif"/>
+			<img class="hiding"  src="../images/puppywithBikeCropped64pxSTAR.gif"/>
 			<img src="../images/starTransparent.png"/>
 		</div>
 	</div>
