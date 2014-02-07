@@ -1,9 +1,11 @@
 var count = 1;
 
 function placeFigure() {
-	$("div#sticky" + count + " > img").toggleClass("hiding");
+	//$("div#sticky" + count + " > img").toggleClass("hiding");
+	
 	count++;
-	$("div#sticky" + count + " > img").toggleClass("hiding");
+	$('body').css('background-image', 'url(../images/hardCodeMap'+ count +'.gif)');
+	//$("div#sticky" + count + " > img").toggleClass("hiding");
 	popup();
 	return count;
 }
