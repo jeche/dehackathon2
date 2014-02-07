@@ -3,7 +3,6 @@ var count = 1;
 function placeFigure() {
 	$("div#sticky" + count + " > img").toggleClass("hiding");
 	count++;
-	
 	$("div#sticky" + count + " > img").toggleClass("hiding");
 	return count;
 }
@@ -11,6 +10,11 @@ function placeFigure() {
 $(document).ready(function () {
 	$("button#start").click(function () {
 		count = placeFigure();
+		if (count == 25) {
+			alert("here!");
+			$('#myModal').modal('toggle');
+			//window.location.replace("../views/ending.html");
+		}
 		console.log(count);
 	});
 	

@@ -17,6 +17,19 @@
   </head>
 
   <body>
+  	<div id="myModal" class="modal hide fade">
+	    <div class="modal-header">
+	    	<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+	    	<h3>You've finished!</h3>
+	    </div>
+	    <div class="modal-body">
+	    	<p>Click below to see how you did.</p>
+	    </div>
+	    <div class="modal-footer">
+	    	<a href="../views/ending.html" class="btn">Continue</a>
+	    </div>
+    </div>
+    
 	<div id="divs">
 		<div class="outer top side" id="sticky1">
 			<img src="../images/puppy64pxGIFdirt.gif"/>
@@ -98,8 +111,7 @@
 	
 	
 	<div style="position:absolute; top:90%; left:50%;">
-		<button id="start" style="position:relative;" class="btn btn-warning">Start Game</button>
-		<button style="position:relative;" class="btn btn-warning" onclick="placeFigure()">New Game</button>
+		<button id="start" style="position:relative;" class="btn btn-warning btn-large">Start Game</button>
 	</div>
 
     <!-- Le javascript
