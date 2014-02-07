@@ -1,4 +1,11 @@
 function get_cycle_list(minu, maxi){
+	
+	var bikeArray = JSON.stringify([]);
+	localStorage.setItem("bikeArray", bikeArray);
+	
+	var boughtBikeArray = JSON.stringify([]);
+	localStorage.setItem("boughtBikeArray", boughtBikeArray);
+	
 	console.log("get_cycle_list");
 	var ac;
 	var j = 1;
