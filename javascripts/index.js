@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 var count = 1;
 
@@ -10,6 +11,21 @@ function placeFigure() {
 }
 
 $(document).ready(function() {
+=======
+
+var count = 1;
+
+function placeFigure() {
+	$("div#sticky" + count + " > img").toggleClass("hiding");
+	count++;
+	$("div#sticky" + count + " > img").toggleClass("hiding");
+	popup();
+	return count;
+}
+
+$(document).ready(function() {
+	
+>>>>>>> 7b35c6a425e9b41d699b52ccfdb1aae99d77e814
 	$("button#start").click(function () {
 		count = placeFigure();
 		if (count == 2) {
