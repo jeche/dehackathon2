@@ -68,6 +68,7 @@ function getData(){
 		}
 		if(s > -1){
 			pug.splice(s, 1);
+
 			localStorage.setItem("bikeArray", JSON.stringify(pug));
 		}
 	}
