@@ -1,10 +1,9 @@
-
 table thead tr{
 	border: black solid 1px;
 }
 .itemListing{
 	border: black solid 1px;
-	width: 500px;
+	width: 600px;
 	padding: 15px;
 	margin: 10px;
 }
@@ -26,6 +25,8 @@ table thead tr{
 	border: black solid 1px;
 	padding: 10px;
 	margin: 10px;
+	width: 300px;
+	height: 200px;
 }
 .header{
 	font-weight: bold;
@@ -33,4 +34,6 @@ table thead tr{
 }
 .details{
 	text-align: center;
+	padding: 5px;
+
 }
