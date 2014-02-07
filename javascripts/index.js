@@ -9,6 +9,7 @@ function placeFigure() {
 	$("div#sticky" + count + " > img").toggleClass("hiding");
 ;
 	console.log($("div#sticky" + count + " > img"));
+	popup();
 	return count;
 }
 
