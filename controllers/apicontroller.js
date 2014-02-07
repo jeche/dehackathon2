@@ -7,11 +7,17 @@ function get_cycle_list(minu, maxi){
 	localStorage.setItem("boughtBikeArray", boughtBikeArray);
 	
 <<<<<<< HEAD
+	var notBoughtArray = JSON.stringify([]);
+	localStorage.setItem("notBoughtArray", notBoughtArray);
+	
+=======
+<<<<<<< HEAD
 =======
 	var notBoughtArray = JSON.stringify([]);
 	localStorage.setItem("notBoughtArray", notBoughtArray);
 	
 >>>>>>> 7b35c6a425e9b41d699b52ccfdb1aae99d77e814
+>>>>>>> 57f0564f96e043cc676c22bc9c40b2bf64151471
 	console.log("get_cycle_list");
 	var ac;
 	var j = 1;
