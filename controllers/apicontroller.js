@@ -1,17 +1,8 @@
 function get_cycle_list(minu, maxi){
+	console.log("get_cycle_list");
 	var ac;
-	var result;
-	$.ajax("https://apis.traderonline.com/vlatest/token", {
-		type:"POST",
-		data: {
-				client_id: secret_things.client_id,
-				client_secret:secret_things.client_secret,
-				grant_type:secret_things.grant_type},
-		success:function(data) {
-			console.log(data);
-			ac = data.access_token;
-			$.ajax("https://apis.traderonline.com/vlatest/cycles", {
-	var result = [];
+	var j = 1;
+	
 	$.ajax("https://apis.traderonline.com/v1.0.0-beta/token", {
 		type:"POST",
 		data: secret_things,
@@ -24,24 +15,24 @@ function get_cycle_list(minu, maxi){
 					data:{  
 							minPrice:0.00,
 							maxPrice:30000.00,
-							zip:"23501",
+							zip:"23510",
 							limit:10,
 							radius:20
 					},
 					success:function(data){
-						console.log(data);
+						
+						var lowPrice = 1000000;
+						var highPrice = 0;
+						var h = 0, l = 0;
+						var newGuy;
+						var resultArray = new Array();
 						for(i = 0; i < data.result.length; i++){
-							$.ajax("https://apis.traderonline.com/vlatest/cycles/" + data.result[i].id, {
+							var item = $.ajax("https://apis.traderonline.com/v1.0.0-beta/cycles/" + data.result[i].id, {
 								type:"GET",
 								headers: {"Authorization" : "Bearer " + ac},
 								success:function(data){
 									
-							$.ajax("https://apis.traderonline.com/v1.0.0-beta/cycles/" + data.result[i].id, {
-								type:"GET",
-								headers: {"Authorization" : "Bearer " + ac},
-								success:function(data){
-									console.log(data);
-									var newGuy = {"description":data.result.description,
+									newGuy = {"description":data.result.description,
 												  "year":data.result.year,
 												  "makeDisplayName":data.result.makeDisplayName,
 												  "price":data.result.price,
@@ -49,14 +40,60 @@ function get_cycle_list(minu, maxi){
 												  "mileage":data.result.mileage,
 												  "primaryColor":data.result.primaryColor,
 												  "url":data.url
+												  
+												  
 									};
-									result.push(newGuy);
+																		
 								},
-								dataType:"JSON"	
+								
+								dataType:"JSON",
+								
 							});
+							
+							
+							item.success(function(item){
+									
+									var itemResult = item.result;
+									if(itemResult.photos.length > 0){
+										
+										resultArray.push(itemResult);
+									}
+									
+									if (resultArray.length > 2 && j === 1) {
+										 j = 0;
+										var item1 = document.getElementById("item1");
+										item1.textContent = resultArray[0].makeDisplayName;
+										var item2 = document.getElementById("item2");
+										item2.textContent = resultArray[1].makeDisplayName;
+										
+										var price1 = document.getElementById("price1");
+										price1.textContent = resultArray[0].price;
+										
+										var price2 = document.getElementById("price2");
+										price2.textContent = resultArray[1].price;  
+										
+										var img1 = document.getElementById("img1");
+										img1.setAttribute('src', resultArray[0].photos[0].url);
+										console.log(resultArray);
+										
+										var img2 = document.getElementById("img2");
+										img2.setAttribute('src', resultArray[1].photos[0].url);
+										
+										var info1 = document.getElementById("info1");
+										info1.textContent = resultArray[0].description;
+										
+										var info2 = document.getElementById("info2");
+										info2.textContent = resultArray[1].description;					
+										
+									}
+									
+								});
+							
 						}
-
-						console.log(result);
+						var lowPrice = 1000000;
+						var highPrice = 0;
+						var h = 0, l = 0;
+						
 						
 					},
 					dataType:"JSON",
@@ -68,10 +105,6 @@ function get_cycle_list(minu, maxi){
 			);			
 		},
 		dataType:"JSON"
-
-	});
-	console.log(result); 
-	return result;
+	}); 
 	
-
 } 
