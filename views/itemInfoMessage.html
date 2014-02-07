@@ -12,10 +12,12 @@
 <link rel="stylesheet" type="text/css" href="../styles/bootstrap-responsive.css">
 <link rel="stylesheet" type="text/css" href="../styles/bootstrap.css">
 <link rel="stylesheet" type="text/css" href="../styles/itemInfoMessage.css">
-
+<script type="javascript">
+	get_cycle_list(0.0, 1000000.0);
+</script>
 </head>
 
-<body onload="get_cycle_list(0.0, 1000000.0)">
+<body onload="weAreReady()">
 <h2 class="header">Which item would you like to purchase?</h2>
 <table class="itemListing">
 	<thead class="frame-heading">
@@ -27,7 +29,7 @@
 	<tbody>
 		<tr>
 			<td><img class="itemImage" id="img1"/></td>
-			<td ><span class="details" id="info1"></span></td>
+			<td class="details"><span id="info1"></span></td>
 		</tr>
 	</tbody>
 </table>
@@ -41,10 +43,10 @@
 	<tbody>
 		<tr>
 			<td><img class="itemImage" id="img2"></td>
-			<td ><span class="details" id="info2"></span></td>
+			<td class="details"><span id="info2"></span></td>
 		</tr>
 	</tbody>
 </table>
-<div style="text-align: center"><button type="button" onClick="closePopUp()" class="btn btn-success">CLOSE</button></div>
+<div style="text-align: center"><button type="button" onClick="closePopUp()" class="btn btn-success" style="margin: 5px">CLOSE</button></div>
 </body>
 </html>
