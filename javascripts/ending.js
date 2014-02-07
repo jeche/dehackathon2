@@ -1,5 +1,5 @@
 function getBikes() {
-	var bikeArray = JSON.parse(localStorage.getItem("bikeArray"));
+	var bikeArray = JSON.parse(localStorage.getItem("boughtBikeArray"));
 	for (var i = 0; i < bikeArray.length; i++) {
 		var bike = bikeArray[i];
 		$("div#bikes").append('<table class="itemListing">\
@@ -14,7 +14,7 @@ function getBikes() {
 		<tbody>\
 		<tr>\
 		<td>\
-		<img class="itemImage small" src="' + bike.photos[0].url + '"/>\
+		<img class="small itemImage" src="' + bike.photos[0].url + '"/>\
 		</td>\
 		<td class="details"><span><div class="fb-share-button" data-href="' + bike.url + '" data-type="button"></div></span></td>\
 		</tr>\
