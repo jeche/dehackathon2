@@ -12,6 +12,9 @@ function getData(){
 			
 	f = randomIntFromInterval(0, pug.length - 1);
 	s = randomIntFromInterval(0, pug.length - 1);
+	while(f === s){
+		s = randomIntFromInterval(0, pug.length - 1);
+	}
 	inflateBy = randomIntFromInterval(5, 15);
 	inflate = randomIntFromInterval(0, 1); 			
 	
