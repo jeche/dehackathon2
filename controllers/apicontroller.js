@@ -55,9 +55,13 @@ function get_cycle_list(minu, maxi){
 									
 									var itemResult = item.result;
 									if(itemResult.photos.length > 0){
-										
 										resultArray.push(itemResult);
+										var bikeArray = JSON.parse(localStorage.getItem("bikeArray"));
+										bikeArray.push(itemResult);
+										localStorage.setItem("bikeArray", JSON.stringify(bikeArray));
 									}
+									
+									
 									
 									if (resultArray.length > 2 && j === 1) {
 										 j = 0;
@@ -93,7 +97,6 @@ function get_cycle_list(minu, maxi){
 						var lowPrice = 1000000;
 						var highPrice = 0;
 						var h = 0, l = 0;
-						
 						
 					},
 					dataType:"JSON",
