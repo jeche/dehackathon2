@@ -1,4 +1,3 @@
-
 var count = 1;
 
 function placeFigure() {
@@ -10,7 +9,6 @@ function placeFigure() {
 }
 
 $(document).ready(function() {
-	
 	$("button#start").click(function () {
 		count = placeFigure();
 		if (count == 2) {

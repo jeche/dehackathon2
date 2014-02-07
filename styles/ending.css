@@ -1,6 +1,6 @@
 body {
 	background-image: url('../images/textscreen2.png');
-	background-repeat: no-repeat;
+	background-repeat: repeat-y;
 	background-size: cover;
   	position: absolute;
   	top: 0;

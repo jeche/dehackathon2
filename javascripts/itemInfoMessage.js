@@ -3,7 +3,7 @@ function getData(){
 	var pug = JSON.parse(localStorage.getItem("bikeArray"));
 	var usedArray = JSON.stringify([]);
 	localStorage.setItem("usedArray", usedArray);
-	
+
 	var lowPrice = 100000000;
 	var highPrice = 0;
 	var l = 0, h = 0;
