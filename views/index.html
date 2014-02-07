@@ -13,14 +13,14 @@
 <script src="../javascripts/index.js"></script>
 <script src="../javascripts/bootstrap.js"></script>
 	<script src="../javascripts/itemInfoMessage.js"></script>
-	
+	<script>var count = localStorage.getItem("Count");</script>
     <!-- Le styles -->
     <link href="../styles/bootstrap.css" rel="stylesheet">
     <link href="../styles/main.css" rel="stylesheet">
     <link href="../styles/bootstrap-responsive.css" rel="stylesheet">
   </head>
 
-  <body onload="get_cycle_list(0.0, 1000000.0)">
+  <body onload="placeFigure()">
   	<div id="myModal" class="modal hide fade">
 	    <div class="modal-header">
 	    	<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
@@ -36,9 +36,9 @@
 	
 	
 	<div style="position:absolute; top:90%; left:50%;">
-		<button id="start" style="position:relative;" class="btn btn-warning btn-large">Start Game</button>
+		<button id="start" style="position:relative;" class="btn btn-warning btn-large">Continue</button>
 	</div>
 
-   
+  
 
   </body>

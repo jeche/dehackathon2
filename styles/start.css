@@ -32,3 +32,8 @@ body {
 .hiding {
 	display:none;
 }
+
+.Image{
+	position:relative;
+    display:inline-block;
+}
